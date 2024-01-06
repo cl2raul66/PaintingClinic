@@ -10,12 +10,9 @@ public interface IUserService
     bool Upsert(User entity);
 }
 
-public interface IUser1Service
+public interface INotificationService
 {
-    bool Exist { get; }
-
-    bool Delete(string id);
-    IEnumerable<User> GetAll();
-    User GetById(string id);
-    bool Upsert(User entity);
+    void Add(CustomNotification notification);
+    IEnumerable<CustomNotification> GetAll();
+    void Remove(CustomNotification notification);
 }

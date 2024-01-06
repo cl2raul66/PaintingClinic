@@ -8,8 +8,8 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Main"
-        ContentTemplate="{DataTemplate v:PgMain}"
-        Route="PgMain" />
+        Title="SignIn"
+        ContentTemplate="{DataTemplate v:PgSignIn}"
+        Route="PgSignIn" />
 
 </Shell>

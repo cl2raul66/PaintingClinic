@@ -76,3 +76,15 @@ public class Report
     public ReportType? ReportType { get; set; }
     public string? ReportData { get; set; }
 }
+
+#region NotificationCenter
+public class CustomNotification
+{    
+    public string? Title { get; set; }
+    public string? Text { get; set; }
+    public TypeNotification Type { get; set; }
+    public int Priority { get; set; }
+    public TimeSpan Duration { get; set; }
+    public DateTime Date { get; set; }
+}
+#endregion

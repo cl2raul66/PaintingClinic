@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PaintingClinic.App.Views.PgSignIn"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PaintingClinic.App.Views"
+    Title="SingIn"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Shell.PresentationMode="Animated"
+    Shell.TabBarIsVisible="False">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
+    <Grid
+        Margin="16"
+        HorizontalOptions="Center"
+        RowDefinitions="auto,*,auto">
+        <Label
+            Grid.Row="0"
+            HorizontalOptions="Center"
+            Text="Welcome to PagoPark!" />
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="8"
+            VerticalOptions="Center">
+            <Image
+                MaximumHeightRequest="300"
+                MaximumWidthRequest="300"
+                Source="dotnet_bot.png" />
+            <Grid RowDefinitions="auto, auto" RowSpacing="{OnIdiom Default=4, Phone=0}">
+                <Label Grid.Row="0" Text="Usuario: *" />
+                <Entry Grid.Row="1" Placeholder="Escriba aquí!" />
+            </Grid>
+            <Grid RowDefinitions="auto, auto" RowSpacing="{OnIdiom Default=4, Phone=0}">
+                <Label Grid.Row="0" Text="Password: *" />
+                <Entry
+                    Grid.Row="1"
+                    IsPassword="True"
+                    Placeholder="Escriba aquí!" />
+            </Grid>
+            <Button Text="Registrar" />
+            <Button Text="Suscribir" />
+        </VerticalStackLayout>
+        <Grid Grid.Row="2">
+            <!--<Label
+                Padding="8"
+                FontAttributes="Bold"
+                FontSize="{OnIdiom Default=Caption,
+                                   Phone=Micro}"
+                HorizontalTextAlignment="Center"
+                Text="by RandA Media Lab, Group"
+                TextColor="{StaticResource Tertiary}" />-->
+            <local:NotificationCenter />
+        </Grid>
+    </Grid>
+
+</ContentPage>

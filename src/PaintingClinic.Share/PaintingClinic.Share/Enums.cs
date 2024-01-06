@@ -29,3 +29,12 @@ public enum ReportType
 {
     Unknown
 }
+
+#region NotificationCenter
+public enum TypeNotification
+{
+    Information,
+    Alert,
+    Danger
+}
+#endregion

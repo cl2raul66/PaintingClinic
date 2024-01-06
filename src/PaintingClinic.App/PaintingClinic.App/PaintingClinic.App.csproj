@@ -69,11 +69,22 @@
 	  <Folder Include="Services\" />
 	  <Folder Include="Tools\Converters\" />
 	  <Folder Include="Tools\Enums\" />
-	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\NotificationCenter\NotificationCenter.xaml.cs">
+	    <DependentUpon>NotificationCenter.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\NotificationCenter\NotificationCenter.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\PgMain.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PgSingIn.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
