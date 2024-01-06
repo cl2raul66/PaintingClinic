@@ -27,6 +27,5 @@ public enum ContactType
 
 public enum ReportType
 {
-    Unknown,
-    // Here you can add the types of reports that supervisors and administrators can generate.
+    Unknown
 }
