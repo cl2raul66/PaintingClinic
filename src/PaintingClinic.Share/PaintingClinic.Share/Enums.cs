@@ -1,32 +1,32 @@
 ﻿namespace PaintingClinic.Share;
 
-public enum RolUsuario
+public enum UserRole
 {
-    Desconocido,
-    Repartidor,
-    Operador,
+    Unknown,
+    DeliveryPerson,
+    Operator,
     Supervisor,
-    Administrador
+    Administrator
 }
 
-public enum EstadoPedido
+public enum OrderStatus
 {
-    Desconocido,
-    Creado,
-    EnProceso,
-    Completado,
-    Entregado
+    Unknown,
+    Created,
+    InProcess,
+    Completed,
+    Delivered
 }
 
-public enum TipoContacto
+public enum ContactType
 {
-    Desconocido,
-    Cliente,
-    Proveedor
+    Unknown,
+    Customer,
+    Supplier
 }
 
-public enum TipoInforme
+public enum ReportType
 {
-    Desconocido,
-    // Aquí puedes agregar los tipos de informes que los supervisores y administradores pueden generar.
+    Unknown,
+    // Here you can add the types of reports that supervisors and administrators can generate.
 }

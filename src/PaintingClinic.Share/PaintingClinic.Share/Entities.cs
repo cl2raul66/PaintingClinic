@@ -1,77 +1,78 @@
 ﻿namespace PaintingClinic.Share;
 
-public class Usuario
+public class User
 {
-    public int IDUsuario { get; set; }
-    public string Nombre { get; set; }
-    public string Contraseña { get; set; }
-    public string Email { get; set; }
-    public RolUsuario Rol { get; set; }
+    public string? UserID { get; set; }
+    public string? Name { get; set; }
+    public string? Password { get; set; }
+    public string? Email { get; set; }
+    public UserRole? Role { get; set; }
 }
 
-public class Contacto
+public class Contact
 {
-    public int IDContacto { get; set; }
-    public string Nombre { get; set; }
-    public string Calle { get; set; }
-    public string Ciudad { get; set; }
-    public string Estado { get; set; }
-    public string Teléfono { get; set; }
-    public string Email { get; set; }
-    public TipoContacto Tipo { get; set; }
+    public string? ContactID { get; set; }
+    public string? Name { get; set; }
+    public string? Street { get; set; }
+    public string? City { get; set; }
+    public string? State { get; set; }
+    public string? PostalCode { get; set; }
+    public string? Phone { get; set; }
+    public string? Email { get; set; }
+    public ContactType? Type { get; set; }
 }
 
-public class Pedido
+public class Order
 {
-    public int IDPedido { get; set; }
-    public int IDContacto { get; set; }
-    public DateTime FechaPedido { get; set; }
-    public DateTime FechaEntrega { get; set; }
-    public EstadoPedido EstadoPedido { get; set; }
-    public List<DetallePedido> DetallesPedido { get; set; }
-    public decimal TotalPedido { get; set; }
+    public string? OrderID { get; set; }
+    public string? ContactID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? DeliveryDate { get; set; }
+    public OrderStatus? OrderStatus { get; set; }
+    public List<OrderDetail>? OrderDetails { get; set; }
+    public decimal? TotalOrder { get; set; }
 }
 
-public class DetallePedido
+public class OrderDetail
 {
-    public int IDProducto { get; set; }
-    public int Cantidad { get; set; }
-    public decimal PrecioUnitario { get; set; }
+    public string? ProductID { get; set; }
+    public int? Quantity { get; set; }
+    public decimal? UnitPrice { get; set; }
 }
 
-public class Producto
+public class Product
 {
-    public int IDProducto { get; set; }
-    public string NombreProducto { get; set; }
-    public string DescripciónProducto { get; set; }
-    public decimal PrecioProducto { get; set; }
-    public int CantidadInventario { get; set; }
+    public string? ProductID { get; set; }
+    public string? ProductName { get; set; }
+    public string? ProductDescription { get; set; }
+    public decimal? ProductPrice { get; set; }
+    public int? InventoryQuantity { get; set; }
 }
 
-public class Ingreso
+public class Income
 {
-    public int IDIngreso { get; set; }
-    public int IDPedido { get; set; }
-    public int IDUsuario { get; set; }
-    public DateTime FechaIngreso { get; set; }
-    public decimal MontoIngreso { get; set; }
-    public string DescripciónIngreso { get; set; }
+    public string? IncomeID { get; set; }
+    public string? OrderID { get; set; }
+    public string? UserID { get; set; }
+    public DateTime? IncomeDate { get; set; }
+    public decimal? IncomeAmount { get; set; }
+    public string? IncomeDescription { get; set; }
 }
 
-public class Gasto
+public class Expense
 {
-    public int IDGasto { get; set; }
-    public int IDUsuario { get; set; }
-    public DateTime FechaGasto { get; set; }
-    public decimal MontoGasto { get; set; }
-    public string DescripciónGasto { get; set; }
+    public string? ExpenseID { get; set; }
+    public string? UserID { get; set; }
+    public DateTime? ExpenseDate { get; set; }
+    public decimal? ExpenseAmount { get; set; }
+    public string? ExpenseDescription { get; set; }
 }
 
-public class Informe
+public class Report
 {
-    public int IDInforme { get; set; }
-    public int IDUsuario { get; set; }
-    public DateTime FechaInforme { get; set; }
-    public TipoInforme TipoInforme { get; set; }
-    public string DatosInforme { get; set; }
+    public string? ReportID { get; set; }
+    public string? UserID { get; set; }
+    public DateTime? ReportDate { get; set; }
+    public ReportType? ReportType { get; set; }
+    public string? ReportData { get; set; }
 }
