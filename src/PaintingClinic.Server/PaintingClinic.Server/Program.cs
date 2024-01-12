@@ -5,7 +5,9 @@ using PaintingClinic.Share;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IUserService, UserService>();
+builder.Services.AddSingleton<ISecurityDbService, SecurityDbService>();
+builder.Services.AddSingleton<IClientService, ClientService>();
+builder.Services.AddSingleton<ISecurityDbService, SecurityDbService>();
 builder.Services.AddSignalR();
 
 builder.Services.AddControllers();
@@ -15,6 +17,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
+
+InitializeRoot();
 
 app.UseSwagger();
 app.UseSwaggerUI();
@@ -34,3 +38,10 @@ app.MapHealthChecks("/healthchecks", new HealthCheckOptions
 });
 
 app.Run();
+
+#region Extra
+void InitializeRoot()
+{
+   
+}
+#endregion

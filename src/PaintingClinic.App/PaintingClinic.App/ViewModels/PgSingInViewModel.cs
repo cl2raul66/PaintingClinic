@@ -16,11 +16,11 @@ public partial class PgSignInViewModel : ObservableValidator
     [ObservableProperty]
     string? password;
 
-    //[RelayCommand]
-    //async Task Signin()
-    //{
+    [RelayCommand]
+    async Task Signin()
+    {
 
-    //}
+    }
 
     //[RelayCommand]
     //async Task Signup()

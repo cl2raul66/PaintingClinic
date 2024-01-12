@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="PaintingClinic.App.Views.PgSignIn"
+    x:Class="PaintingClinic.App.Views.PgSignUp"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PaintingClinic.App.Views"
-    Title="SingIn"
+    Title="SignUp"
     Shell.FlyoutBehavior="Disabled"
     Shell.NavBarIsVisible="False"
-    Shell.PresentationMode="Animated"
+    Shell.PresentationMode="ModalAnimated"
     Shell.TabBarIsVisible="False">
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False" />
@@ -20,7 +20,7 @@
         <Label
             Grid.Row="0"
             HorizontalOptions="Center"
-            Text="Welcome to PagoPark!" />
+            Text="SignUp" />
         <VerticalStackLayout
             Grid.Row="1"
             Spacing="8"
@@ -55,5 +55,4 @@
             <local:NotificationCenter />
         </Grid>
     </Grid>
-
 </ContentPage>

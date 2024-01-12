@@ -1,12 +1,22 @@
 ﻿namespace PaintingClinic.Share;
 
-public class User
+public class ClientDto
+{
+    public object? Device { get; set; }
+}
+
+public class UserDto
 {
     public string? UserID { get; set; }
-    public string? Name { get; set; }
-    public string? Password { get; set; }
-    public string? Email { get; set; }
+    public Contact? PersonalInfo { get; set; }
     public UserRole? Role { get; set; }
+    public string? AuthKey { get; set;}
+}
+
+public class AuthDto
+{
+    public string? Key { get; set; }
+    public string? AccessKey { get; set; }
 }
 
 public class Contact

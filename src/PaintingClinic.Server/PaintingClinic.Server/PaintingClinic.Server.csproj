@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="LiteDB" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
@@ -16,6 +18,10 @@
     <Reference Include="PaintingClinic.Share">
       <HintPath>..\..\PaintingClinic.Share\PaintingClinic.Share\bin\Debug\net8.0\PaintingClinic.Share.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

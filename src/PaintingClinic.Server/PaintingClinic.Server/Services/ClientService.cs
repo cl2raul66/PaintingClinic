@@ -3,24 +3,24 @@ using PaintingClinic.Server.Models;
 
 namespace PaintingClinic.Server.Services;
 
-public interface IUserService
+public interface IClientService
 {
-    bool Exist { get; }
-    User? Get(string id);
-    IEnumerable<User>? GetAll();
-    void Insert(User entity);
-    void Update(User entity);
+    bool Exist {  get; }
+    Client? Get(string id);
+    IEnumerable<Client>? GetAll();
+    void Insert(Client entity);
+    void Update(Client entity);
     void Delete(string id);
 }
 
-public class UserService : IUserService
+public class ClientService : IClientService
 {
-    readonly ILiteCollection<User> collection;
+    readonly ILiteCollection<Client> collection;
 
-    public UserService(ISecurityDbService securityDb)
+    public ClientService(ISecurityDbService securityDb)
     {
         var db = securityDb.Db;
-        collection = db!.GetCollection<User>();
+        collection = db!.GetCollection<Client>();
     }
 
     public bool Exist => collection.Count() > 0;
@@ -30,24 +30,24 @@ public class UserService : IUserService
         _ = collection.Delete(id);
     }
 
-    public User? Get(string id)
+    public Client? Get(string id)
     {
         var result = collection.FindById(id);
         return result;
     }
 
-    public IEnumerable<User>? GetAll()
+    public IEnumerable<Client>? GetAll()
     {
         var result = collection.FindAll();
         return result;
     }
 
-    public void Insert(User entity)
+    public void Insert(Client entity)
     {
         _ = collection.Insert(entity);
     }
 
-    public void Update(User entity)
+    public void Update(Client entity)
     {
         _ = collection.Update(entity);
     }

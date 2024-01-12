@@ -5,9 +5,9 @@ public interface IUserService
     bool Exist { get; }
 
     bool Delete(string id);
-    IEnumerable<User> GetAll();
-    User GetById(string id);
-    bool Upsert(User entity);
+    IEnumerable<UserDto> GetAll();
+    UserDto GetById(string id);
+    bool Upsert(UserDto entity);
 }
 
 public interface INotificationService
